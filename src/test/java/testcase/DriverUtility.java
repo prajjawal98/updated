@@ -9,18 +9,18 @@ public class DriverUtility {
 
     private DriverUtility() {
         System.setProperty("webdriver.chrome.driver", UrlConstants.CHROME_DRIVER_PATH);
-        driver = new ChromeDriver();
-        driver.get(UrlConstants.URL);
+         driver = new ChromeDriver();
+
+
     }
 
-     void performTest(String parsedEmailId) throws Exception{
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[1]/div/a[1]")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[1]/form/div/input")).sendKeys(parsedEmailId);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[1]/form/button")).click();
-        Thread.sleep(5000);
+    void performTest(String parsedEmailId) throws InterruptedException{
+            driver.get(UrlConstants.URL);
+            driver.findElement(By.cssSelector("a[href='/forgot-username']")).click();
+            Thread.sleep(1000);
+            driver.findElement(By.cssSelector("input[type='email']")).sendKeys(parsedEmailId);
+            Thread.sleep(1000);
+            driver.findElement(By.cssSelector("button[class='btn btn-primary font-weight-bold w-100']")).click();
     }
 
     void shutdownDriver() {

@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="/home/knoldus/framework/src/test/java/testcase/Datadot.java">
+    <test verbose="2" preserve-order="true" name="/home/knoldus/framework/src/test/java/testcase/DataDot.java">
         <classes>
-            <class name="testcase.Datadot">
+            <class name="testcase.DataDot">
                 <methods>
-                    <include name="dataDot"/>
-                    <include name="Digits"/>
-                    <include name="plus"/>
-                    <include name="chars"/>
-                    <include name="capital"/>
-                    <include name="chardigit"/>
-                    <include name="desh"/>
-                    <include name="underscore"/>
+                    <include name="runTest"/>
                 </methods>
             </class>
         </classes>
