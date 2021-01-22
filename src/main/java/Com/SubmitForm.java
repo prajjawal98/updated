@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 
-public class DataDot {
+public class SubmitForm {
     void utSetUp() throws Exception {
     }
 
@@ -23,12 +23,13 @@ public class DataDot {
         for (int i = 0; i < emailList.size(); i++) {
             try {
                 driverUtility.performTest(emailList.get(i));
+                //driverUtility.wait(1000);
             } catch (RuntimeException e) {
                 testFailed = true;
-                System.out.println("Test case " + (i + 1) + " with " + emailList.get(i)+" failed with error :" + e);
+                System.out.println("Test case " +(i + 1) +" = "+ emailList.get(i)+"  failed with error :" + e);
             }
             if (!testFailed) {
-                System.out.println("Test case " + (i + 1) + " with " + emailList.get(i)+ " executed successfully; ");
+                System.out.println("Test case " + (i + 1) +" = "+ emailList.get(i)+ "  executed successfully; ");
             }
         }
         driverUtility.shutdownDriver();
