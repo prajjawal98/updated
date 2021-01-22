@@ -1,4 +1,4 @@
-package testcase;
+package Com;
 
 public interface UrlConstants {
     String CHROME_DRIVER_PATH = "chromedriver";
