@@ -84,15 +84,17 @@ In this package we store excel sheet( store all test cases).
 
 ## How to Run in Azure pipeline:-	
 
-	* Go to Microsoft azure url - [https://dev.azure.com]https://dev.azure.com and sign in the microsoft account.
-	* Click on start free. After you see yourself in Azure devops page.
-	* Create a new project.
-	* Create a pipeline .
-	* Click on this Use the classic editor. Pickup the selenium code from github. 
+* Go to Microsoft azure url -https://dev.azure.com and sign in the microsoft account.
+* Click on start free. After you see yourself in Azure devops page.
+* Create a new project.
+* Create a pipeline .
+* Click on this Use the classic editor. Pickup the selenium  code from github.
+
 ### Result in azure pipeline 
 
-<img src="new1.png">
-<img src="new2.png">
+![Test Image 1](new1.png)
+
+![Test Image 2](“new2.png”)
 
 ## Future Scope of Selenium Framework
 * Framework also allow you to read the data from an external data source like excel sheet or database and input the data in your web or desktop application thereby making your Automation script reusable.
