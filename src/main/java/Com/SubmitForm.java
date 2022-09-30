@@ -23,7 +23,6 @@ public class SubmitForm {
         for (int i = 0; i < emailList.size(); i++) {
             try {
                 driverUtility.performTest(emailList.get(i));
-                //driverUtility.wait(1000);
             } catch (RuntimeException e) {
                 testFailed = true;
                 System.out.println("Test case " +(i + 1) +" = "+ emailList.get(i)+"  failed with error :" + e);
