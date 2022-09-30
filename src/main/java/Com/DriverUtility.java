@@ -32,28 +32,19 @@ public class DriverUtility {
         urlKeys.put(OpenBrowser.SEND_EMAIL1_BUTTON_KEY, prop.getProperty(OpenBrowser.SEND_EMAIL1_BUTTON_KEY));
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
 
     }
 
     void performTest(String parsedEmailId) throws InterruptedException {
         driver.get(OpenBrowser.URL1);
-        //WebDriverWait wait=new WebDriverWait(driver, 20);
         driver.findElement(By.cssSelector(urlKeys.get(OpenBrowser.FORGET_USERNAME_BUTTON_KEY))).click();
-        //Thread.sleep(1000);
-
         driver.findElement(By.cssSelector(urlKeys.get(OpenBrowser.ENTER_EMAIL_KEY))).sendKeys(parsedEmailId);
-        //Thread.sleep(1000);
         driver.findElement(By.cssSelector(urlKeys.get(OpenBrowser.SEND_EMAIL_BUTTON_KEY))).click();
         driver.get(OpenBrowser.URL2);
         driver.findElement(By.cssSelector(urlKeys.get(OpenBrowser.ENTER_EMAIL1_KEY))).clear();
         driver.findElement(By.cssSelector(urlKeys.get(OpenBrowser.ENTER_EMAIL1_KEY))).sendKeys(parsedEmailId);
-        //Thread.sleep(1000);
         driver.findElement(By.cssSelector(urlKeys.get(OpenBrowser.SEND_EMAIL1_BUTTON_KEY))).click();
-        //Thread.sleep(2000);
-
-
-        //Thread.sleep(1000);
     }
 
 
